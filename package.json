@@ -1,0 +1,15 @@
+{
+  "name": "site_de_cursos_online",
+  "version": "1.0.0",
+  "description": "Esse é um site de cursos online, desenvolvido na matéria de PPI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitor Soares",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
