@@ -1,6 +1,6 @@
 import express from 'express';
-
 import session from 'express-session';
+import verificarAutenticacao from './security/authenticate.js';
 
 const app = express();
 const porta = 3000;
@@ -42,7 +42,7 @@ app.get("/logout", (requisicao, resposta) => {
 app.use(express.static('public'));
 
 //middleware - verificarAutenticacao
-app.use(express.static('private'));
+app.use(verificarAutenticacao, express.static('private'));
 
 app.listen(porta, host, () => {
     console.log(`Servidor em execução em http://${host}:${porta}`);   //`` template literals
