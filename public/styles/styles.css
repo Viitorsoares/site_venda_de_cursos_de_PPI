@@ -37,3 +37,10 @@
 .text_title a:hover {
     background-color: #8a2de1d0;
 }
+
+@media ( min-width: 375px) {
+    .text_title {
+        text-align: center;
+        padding: 0 25px;
+    }
+}

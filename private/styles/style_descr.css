@@ -6,10 +6,105 @@
     box-sizing: border-box;
     background-color: #F7F9FA;
     font-family: "Lato", sans-serif;
+    font-size: 1rem;
     text-decoration: none;
     border: none;
 }
 
-.container {
-    
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center;
+    margin-bottom: 4rem;
 }
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container_description {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.description h1 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.description p {
+    margin-bottom: 1rem;
+}
+
+.description_script {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    border: solid 2px #E9EAF2;
+    border-radius: 15px;
+}
+
+.description_script h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.btn_quant {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.description_script button {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: #892DE1;
+    color: #fff;
+    padding: 0 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.description_script button:hover {
+    background-color: #8a2de1d0;
+}
+
+.box_description {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 0 2.2rem .8rem 2.2rem;
+    border: solid 2px #E9EAF2;
+    border-radius: 15px;
+}
+
+.box_description_first h3, .box_description_two h3 {
+    margin-top: .8rem;
+}
+
+.box_description_first li, .box_description_two li {
+    margin: .4rem;
+}
+

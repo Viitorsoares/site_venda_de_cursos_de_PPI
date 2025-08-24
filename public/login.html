@@ -13,64 +13,66 @@
 
 <body>
     <br />
-    <div class="container w-50">
-        <h1>Login no Sistema</h1>
-        <form method="POST" action="/login" class="row g-3 needs-validation" novalidate>
-            <div class="row pt-4">
-                <div class="col-md-4">
-                    <label for="validationCustom01" class="form-label">Usuário</label>
-                    <input type="text" class="form-control" id="usuario" name="usuario" value="" required>
-                    <div class="valid-feedback">
-                        OK!
-                    </div>
-                    <div class="invalid-feedback">
-                        Por favor, informe o nome do usuário!
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-4">
-                <div class="col-md-4">
-                    <label for="validationCustomUsername" class="form-label">Senha:</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">#</span>
-                        <input type="password" class="form-control" id="senha" name="senha"
-                            aria-describedby="inputGroupPrepend" required>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="container w-50">
+            <h1>Login no Sistema</h1>
+            <form method="POST" action="/login" class="row g-3 needs-validation" novalidate>
+                <div class="row pt-4">
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Usuário</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" value="" required>
                         <div class="valid-feedback">
                             OK!
                         </div>
                         <div class="invalid-feedback">
-                            Por favor, informe a senha.
+                            Por favor, informe o nome do usuário!
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row pt-2">
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Login</button>
-                    <button class="btn btn-secondary" type="button" onclick="history.back()">Voltar</button>
+                <div class="row pt-4">
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label">Senha:</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">#</span>
+                            <input type="password" class="form-control" id="senha" name="senha"
+                                aria-describedby="inputGroupPrepend" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, informe a senha.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </form>
-        <script>
-            (() => {
-                'use strict'
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-secondary" type="button" onclick="history.back()">Voltar</button>
+                    </div>
+                </div>
+            </form>
+            <script>
+                (() => {
+                    'use strict'
 
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                const forms = document.querySelectorAll('.needs-validation')
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    const forms = document.querySelectorAll('.needs-validation')
 
-                // Loop over them and prevent submission
-                Array.from(forms).forEach(form => {
-                    form.addEventListener('submit', event => {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
+                    // Loop over them and prevent submission
+                    Array.from(forms).forEach(form => {
+                        form.addEventListener('submit', event => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
 
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-            })()
-        </script>
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+                })()
+            </script>
+        </div>
     </div>
 </body>
 
