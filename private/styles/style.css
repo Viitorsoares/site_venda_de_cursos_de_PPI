@@ -7,33 +7,53 @@
     background-color: #F7F9FA;
     font-family: "Lato", sans-serif;
     text-decoration: none;
+    border: none;
 }
 
-.text_title {
+.container {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 3rem;
 }
 
-.text_title h1 {
-    font-size: 2rem;
-    font-weight: bold;
+.course_boxes {
+    width: 25%;    
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 1rem;
+    border: 1px solid #E9EAF2;
+    border-radius: 10px;
 }
 
-.text_title a {
+.course_boxes img {
+    width: 100%;   
+    height: 50%;
+    border-radius: 10px;
+}
+
+.course_boxes p {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.course_boxes a {
     font-size: 1rem;
     font-weight: 600;
+    text-align: center;
     background-color: #892DE1;
     color: #fff;
-    padding: 15px 20px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
-.text_title a:hover {
+.course_boxes a:hover {
     background-color: #8a2de1d0;
 }
