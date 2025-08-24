@@ -4,19 +4,19 @@ import verificarAutenticacao from './security/authenticate.js';
 
 const app = express();
 const porta = 3000;
-const host = 'localhost'; //permite acesso à aplicação vindas de todas as interfaces de rede
+const host = 'localhost'; 
 
-//configurar o servidor para usar o express-session
+
 app.use(session({
     secret: 'meuS3gr3d0',
     resave: true,
     saveUninitialized: true,
     cookie: {
-        maxAge: 1000 * 60 * 15 //15 minutos
+        maxAge: 1000 * 60 * 15 
     }
 }));
 
-app.use(express.urlencoded({extended: true})); //configura o middleware para aceitar o corpo da requisição em um formato URL-encoded
+app.use(express.urlencoded({extended: true})); 
 
 app.post('/login', (requisicao, resposta) => {
     const usuario = requisicao.body.usuario;
@@ -32,18 +32,10 @@ app.post('/login', (requisicao, resposta) => {
     
 });
 
-
-app.get("/logout", (requisicao, resposta) => {
-    requisicao.session.destroy();
-    resposta.redirect('/login.html');
-});
-
-//configura o servidor para servir arquivos estáticos
 app.use(express.static('public'));
 
-//middleware - verificarAutenticacao
 app.use(verificarAutenticacao, express.static('private'));
 
 app.listen(porta, host, () => {
-    console.log(`Servidor em execução em http://${host}:${porta}`);   //`` template literals
+    console.log(`Servidor em execução em http://${host}:${porta}`);   
 });
